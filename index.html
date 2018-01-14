@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso javascript</title>
+	<meta charset="utf-8">
+
+	<!--JavaScript-->
+		<script>
+			function btnchange(n) {
+				document.getElementById(n).innerHTML = "mudei o conteudo da tag html com javascript";
+			}
+			function change(n) {
+				document.getElementById(n).innerHTML = "Ola Mundo";
+			}
+			function datahj(n) {
+				document.getElementById(n).innerHTML = Date();
+			}
+				function changedata(n) {
+				document.getElementById(n).innerHTML = "Data de Hoje";
+			}
+		</script>
+</head>
+<body style="position: absolute;">
+	<div  class="container"style="padding: 5%;position: relative;width: 450px; height: 300px; background-color: lightblue; border-radius: 20%;">
+		<div class="row justify-content-lg-center">
+				<h2 id="data">Data de Hoje</h2>
+					<button type="button" onclick="datahj('data')">CLIQUE AQUI</button>
+					<button type="button" onclick="changedata('data')">VOLTAR</button>
+
+				<h2 id="ola">Ola Mundo</h2>
+					<button type="button" onclick ="btnchange('ola')";> CLIQUE PARA MUDAR</button>
+					<button type="button" onclick="change('ola')";>VOLTAR</button>
+		</div>
+	</div>
+</body>
+</html>
