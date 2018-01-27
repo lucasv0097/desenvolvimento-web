@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home :: Gamehouse</title>
+<meta charset="utf-8">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+<!-- MUDEI O NOME POR QUE OS ACENTO TAVA BUGADO NO MEU PC-->
+<?php include_once "funcoes.php"; 
+	
+?>
+
+</head>
+<body>
+
+<!-- Games Page Starts here -->
+<div class="games">
+	<div class="container">
+		<div class="contact">
+			<br><br><br><br><br><br>
+
+<!--TRECHO PHP PARA FAZER LOGIN-->
+<?php
+	$con = conectarBd();
+	$aqlvalores = mysqli_query($con, "SELECT*FROM USUARIOS WHERE ID =".$_POST['idU']);
+		$r = mysqli_fetch_array($sqlvalores);
+			$nome = $r['NOME'];
+			$email = $r['EMAIL'];
+			$login = $r['LOGIN'];
+		
+?>
+			
+			<div class="loginbox">
+				<div class="text">
+					<form method="post" action="#">
+						<fieldset>
+							<legend>
+								<span class="login" style="width: 405px;font-size:30px;">Alterar Usuário<font color="#68BEED">
+									
+								</span>
+							</legend>
+							<div class="contact-box">
+								<div class="text">
+									<br><h4>Informações pessoais</h4><br>
+									<p>Nome completo:</p><br>
+									<input name="nome" type="text" required="" value="<?php echo $nome; ?>" />
+							  </div>
+							</div>
+							
+							<div class="contact-box">
+								<div class="text">
+									<br><h4 style="margin-bottom:25px">Informações de contato</h4>
+									<p>E-mail:</p><br>
+									<input name="email" type="email" required value="<?php echo $email; ?>"/>
+								</div>
+							</div>
+							
+							<div class="contact-box">
+							
+								<div class="text">
+									<br><h4 style="margin-bottom:25px">Informações da conta</h4>
+									<p>Usuário:</p><br>
+									<input name="usuario" type="text" maxlength=10 required value="<?php echo $login; ?>"><br>
+									<br>
+									<p>Senha:</p><br>
+									<input name="senhaC" type="password" disabled maxlength=10 required value="********"><br>
+									<br/><br>
+								</div>
+							</div>
+							<div class="text-but" style="width:100%;">
+								<input name="btnCadastrar" type="submit" value="Alterar" style="width:305px;"/>
+								<input name="btnCadastrar" type="submit" value="Deletar" style="width:305px;"/>
+							</div>
+						</fieldset>
+					</form>
+<!--TRECHO PHP PARA CADASTRAR NOVO USUARIO-->
+<?php
+	if(isset($_POST['btnCadastrar']) and $_POST['btnCadastrar'] == "CADASTRAR"){
+		$con = conectarBd();
+
+		$login = $_POST['usuario']; $senha = MD5($_POST['senhaC']);
+		$nome = $_POST['nome'];	$email = $_POST['email'];
+
+		$sql = "SELECT * FROM USUARIOS WHERE LOGIN = '$login' or EMAIL = '$email'";
+		$sqlQuery = mysqli_query($con, $sql);
+		
+			$sqlQuery = mysqli_query($con, "UPDATE USUARIOS SET(NOME,EMAIL,LOGIN)VALUES('$nome','$email','$login') WHERE ID = ".$_POST['idU']);
+			//FAZER SAIDAS COM CSS DIFERENTE 
+		mysqli_close($con);
+	}
+?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php footer(); ?>
+</body>
+</html>

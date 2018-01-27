@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PRECISAMOS DE UMA FUNÇÃO ATRELADA AO BOTÃO "SAIR" DO CABEÇALHO PARA ENCERRAR O COOKIE EM VIGÊNCIA (SEJA ADM OU USUÁRIO COMUM).
+-----FEITO------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AINDA PRECISO DAR UMA "LIMPADA" NO CSS, TOCO ISSO DE BOA PELA TARDE
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O LANCE DO BOTÃO VOLTAR É TRETA, TENTEI USAR A ESTRUTURA DO TEMPLATE QUE TINHA MAS NÃO DEU CERTO, PELO FATO DE HAVEREM ALGUMAS PÁGINAS QUE PODEM SER ACESSADAS DE MÚLTIPLOS LUGARES
+(A PAGE DE LIVROS PODE SER ACESSADA PELA PAGE DE PESQUISA TANTO QUANTO A DE RESERVAS) FICARIA EMBAÇADO FAZER ISSO COM UM MERO HREF SEM UM JAVASCRIPT FUDIDO. SE ALGUM DE VCS QUISER
+TENTAR, A VONTADE, APESAR DE QUE ACHO NÃO SER NECESSÁRIO, VCS QUE VEEM
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AINDA TENHO DE FAZER AS MENSAGENS DE CONFIRMAÇÃO DOS COMANDOS, ESTILO "PARABÉNS RETARDADO! VOCÊ CONSEGUIU SE CADASTRAR!" PRA CADA FUNÇÃO DO SITE. FAÇO DE BOA PELA TARDE
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
