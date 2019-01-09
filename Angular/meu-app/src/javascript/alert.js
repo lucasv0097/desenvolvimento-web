@@ -1,3 +1,3 @@
 function alert() {
-    alert('teste com alert js no angular');
+    alert("teste com alert js no angular");
 }
