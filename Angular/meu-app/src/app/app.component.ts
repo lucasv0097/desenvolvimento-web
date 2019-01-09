@@ -8,14 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'meu-app';
 alert() {
-  Swal({
-    title: 'Sweet!',
-    text: 'Modal with a custom image.',
-    imageUrl: 'https://unsplash.it/400/200',
-    imageWidth: 400,
-    imageHeight: 200,
-    imageAlt: 'Custom image',
-    animation: false
+  swal({
+    title: 'success!',
+    text: 'you clicked',
+    type: 'success',
+    confirmButtonText: 'Cool'
   })
 }
 }
