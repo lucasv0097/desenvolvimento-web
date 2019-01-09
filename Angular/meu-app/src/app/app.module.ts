@@ -23,4 +23,4 @@ import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
