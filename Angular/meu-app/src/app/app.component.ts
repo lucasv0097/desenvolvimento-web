@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   title = 'meu-app';
   
 alert() {
-  Swal({
+  swal({
     title: 'success!',
     text: 'you clicked',
     type: 'success',
