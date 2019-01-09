@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   titulo="pagina sobre funcionando";
-  constructor() { }
 
   ngOnInit() {
   }
