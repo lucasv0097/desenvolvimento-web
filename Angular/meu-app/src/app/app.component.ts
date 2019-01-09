@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'meu-app';
+
+  arrayNomes = [
+    "Adélia Hilário",
+    "António Gentil",
+    "Brenda Castelo",
+    "Diana Sales",
+    "Flávia Ochoa"
+];
 }
