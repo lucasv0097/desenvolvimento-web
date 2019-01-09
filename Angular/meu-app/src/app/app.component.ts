@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'meu-app';
 alert() {
-  swal({
+  Swal({
     title: 'success!',
     text: 'you clicked',
     type: 'success',
