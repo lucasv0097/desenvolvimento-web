@@ -6,10 +6,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MeuApp';
-  count = 0;
+  private count : number = 0;
+  private countgs : number = 0;
+
   
+  public get value() : number {
+    return this.countgs;
+  }
+  
+  
+  public set value(v : number) {
+    this.countgs = v;
+  }
+
   botaoclicado(){
-    this.count = this.count +1;
-    return this.count;
+    this.countgs = this.countgs +1;
+    return this.countgs;
   }
 }
