@@ -17,7 +17,11 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+<label>Seu nome:</label>
+<input type="text" ng-model="name"><br>
+<h4 ng-bind="name"></h4>
 
-<button (click)="count = count + 1">OK Count</button>
+<button (click)="botaoclicado()">Count</button>
 <p>{{count}}</p>
+
 <router-outlet></router-outlet>
