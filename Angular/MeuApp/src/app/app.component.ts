@@ -5,18 +5,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'MeuApp';
-  private countgs  = 0;
 
   public get value(): number {
-    return this.countgs;
+    return this.count;
   }
   public set value(v: number) {
-    this.countgs = v;
+    this.count = v;
   }
+  title = 'MeuApp';
+  private count: number;
 
   botaoclicado() {
-    this.countgs = this.countgs + 1;
-    return this.countgs;
+    this.count = this.count + 1;
+    return this.count;
   }
 }

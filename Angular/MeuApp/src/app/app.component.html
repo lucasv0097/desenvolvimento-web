@@ -17,10 +17,14 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
-<label>Seu nome:</label>
-<input type="text"><br>
 
-<button (click)="botaoclicado()">Count</button>
-<p>{{countgs}}</p>
+<div class="bg"> 
+  <label>Seu nome:</label>
+  <input type="text" [(ngModel)]="username">
+  <p class="red">Hello {{username}}!</p>
+</div> 
+
+<button (click)="botaoclicado()">Contador Click</button>
+<p>{{count}}</p>
 
 <router-outlet></router-outlet>
