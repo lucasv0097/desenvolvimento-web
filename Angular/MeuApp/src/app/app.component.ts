@@ -5,18 +5,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-
-  public get value(): number {
-    return this.count;
-  }
-  public set value(v: number) {
-    this.count = v;
-  }
   title = 'MeuApp';
-  private count: number;
+  private count = 0;
 
-  botaoclicado() {
-    this.count = this.count + 1;
-    return this.count;
-  }
+    botaoclicado() {
+      return this.count += 1;
+    }
 }
