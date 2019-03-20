@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MeuApp';
-  count = 0;
-  botaoclicado() {
-    return this.count ++;
-  }
+
 }
