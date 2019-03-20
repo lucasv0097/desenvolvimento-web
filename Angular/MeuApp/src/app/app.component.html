@@ -26,11 +26,14 @@
   <div class="col-2"> 
     <label>Seu nome:</label>
     <input type="text" class="form-control" [(ngModel)]="username">
-    <p class="red">Hello {{username}}!</p>
+    <h3 class="red">Hello {{username}}!</h3>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-info btn btn-lg" (click)="botaoclicado()">Contador Click</button>
+    <h2>Clicked {{count}} times</h2>
   </div>
 </div> 
 
-<button class="btn btn-info btn btn-lg" (click)="botaoclicado()">Contador Click</button>
-<h2>{{count}}</h2>
+
 
 <router-outlet></router-outlet>
