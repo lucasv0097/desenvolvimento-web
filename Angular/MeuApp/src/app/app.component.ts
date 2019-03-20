@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MeuApp';
-  private count = 0;
-
-    botaoclicado() {
-      return this.count += 1;
-    }
+  count = 0;
+  botaoclicado() {
+    return this.count ++;
+  }
 }
