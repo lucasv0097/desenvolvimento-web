@@ -18,13 +18,19 @@
   </li>
 </ul>
 
-<div> 
-  <label>Seu nome:</label>
-  <input type="text" [(ngModel)]="username">
-  <p class="red">Hello {{username}}!</p>
+<div class="alert alert-success" role="alert">
+  This is a primary alert—check it out!
+</div>
+
+<div>   
+  <div class="col-2"> 
+    <label>Seu nome:</label>
+    <input type="text" class="form-control" [(ngModel)]="username">
+    <p class="red">Hello {{username}}!</p>
+  </div>
 </div> 
 
-<button (click)="botaoclicado()">Contador Click</button>
-<p>{{count}}</p>
+<button class="btn btn-info btn btn-lg" (click)="botaoclicado()">Contador Click</button>
+<h2>{{count}}</h2>
 
 <router-outlet></router-outlet>
