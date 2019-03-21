@@ -1,34 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" >Menu</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div>   
-  <div class="col-2"> 
-    <label>Seu nome:</label>
-    <input type="text" class="form-control" [(ngModel)]="username">
-    <h3 class="red">Hello {{username}}!</h3>
-  </div>
-  <div class="col-3">
-    <button class="btn btn-info btn btn-lg" (click)="botaoclicado()">Contador Click</button>
-    <h2>Clicked {{count}} times</h2>
+<div class="row">  
+  <div class="col-12 col-2"> 
+    <div class="form-group form-inline">     
+      <label>Seu nome:</label>
+      <input type="text" class="form-control" [(ngModel)]="customerName">
+      <h3 class="red">Hello {{customerName}}!</h3>
+    </div>
+    <br>
+    <div class ="col-12 col-2">
+      <button class="btn btn-success btn-circle" (click)="contador()">Contador</button>
+      <h3 class="red">Voce clicou {{counter}} vezes!</h3>
+    </div>
+    <br>
+    <button class="btn btn circle btn-info" (click)="onClickMe()">Click me!</button>
   </div>
 </div> 

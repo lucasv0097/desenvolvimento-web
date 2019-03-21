@@ -8,6 +8,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginComponent } from './pages/login/login.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,4 +25,5 @@ import { LoginComponent } from './pages/login/login.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}
