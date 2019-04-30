@@ -3,19 +3,18 @@ import './Conversor.css';
 export default class Conversor extends Component {
 
     constructor( props ){
-
         super(props);
         
         this.state = {
-            moedaA_valor: '0',
-            moedaB_valor: 0,
-            
+            moedaA_valor: '',
+            moedaB_valor: 0
         }
-        this.converter = this.converter.bind(this);
 
+        this.converter = this.converter.bind(this);
     }
 
     converter () {
+
         console.log( this.state )
 
         let de_para = `${this.props.moedaA}_${this.props.moedaB}`;
@@ -33,18 +32,17 @@ export default class Conversor extends Component {
             
             this.setState({ moedaB_valor })
         })
-        
     }
 
     render() {
         return (
-            
-        <div className = "conversor" >
+        <div className = "conversor">
             <h2>{ this.props.moedaA } para { this.props.moedaB }</h2>
 
-            <input type = "text" onChange = { (event) => this.setState( 
+            <input type = "text" onChange = { (event) => 
+                { this.setState( 
                     { moedaA_valor: event.target.value } 
-                )  }>
+                ) } }>
             </input>
             <input type = "button" value = "converter" onClick = { this.converter } ></input>
             
