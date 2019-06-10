@@ -10,4 +10,3 @@ $db = mysqli_select_db($conect,"meubanco");
 /*Configurando este arquivo, depois é só você dar um include em suas paginas php,
 isto facilita muito, pois caso haja necessidade de mudar seu Banco de Dados
 você altera somente um arquivo*/
-?>
